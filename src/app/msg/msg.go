@@ -9,5 +9,5 @@ import (
 var Processor = protobuf.NewProcessor()
 
 func init() {
-	Processor.Register(&cl.Hello{})
+	Processor.Register(&cl.C2L_Login{})
 }
