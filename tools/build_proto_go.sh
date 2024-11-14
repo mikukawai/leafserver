@@ -21,6 +21,7 @@ do
   proto_path=$PROJECT_PATH/protos/out
   eval "$CLANG_FORMAT -i $proto_path/$i.proto"
 	if $PROTOC -I=$proto_path --go_out=./ $proto_path/$i.proto; then
+	#if $PROTOC -I=$proto_path --go_out=paths=source_relative:./ $proto_path/$i.proto; then
 		echo build success $i.proto
 	else
 		echo build failed $i.proto
